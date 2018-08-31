@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="LayaBox," />
 
 
 
@@ -79,16 +79,22 @@
 
 
 
-<meta name="description" content="What&apos;s the difference between a man without a dream and a salted fish.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kelvin&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="近期学习了Layabox游戏引擎，对游戏开发有了一定的认知，希望通过这次整理、总结 近期所学，能更近一步。使用Layabox引擎制作虚拟摇杆是很方便，我通过官方示例给出的代码制作 (参考LayaAir 3D角色脚本控制与碰撞检测)并详细解释一下 重要的代码段。   创建虚拟摇杆UI界面使用LayaAirIDE创建摇杆UI布局 创建一个Page ——&amp;gt; view 设置合适的宽高（例如：30">
+<meta name="keywords" content="LayaBox">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LayaBox虚拟摇杆详细描述Layabox FSVJoy">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/LayabFSVJoy/index.html">
 <meta property="og:site_name" content="Kelvin&#39;s blog">
-<meta property="og:description" content="What&apos;s the difference between a man without a dream and a salted fish.">
+<meta property="og:description" content="近期学习了Layabox游戏引擎，对游戏开发有了一定的认知，希望通过这次整理、总结 近期所学，能更近一步。使用Layabox引擎制作虚拟摇杆是很方便，我通过官方示例给出的代码制作 (参考LayaAir 3D角色脚本控制与碰撞检测)并详细解释一下 重要的代码段。   创建虚拟摇杆UI界面使用LayaAirIDE创建摇杆UI布局 创建一个Page ——&amp;gt; view 设置合适的宽高（例如：30">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/08/31/LayabFSVJoy/createFSVJoyLayout.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/08/31/LayabFSVJoy/FSVJoyXY.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/08/31/LayabFSVJoy/FSVjoyComputeAngal.jpg">
+<meta property="og:updated_time" content="2018-08-31T03:41:33.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kelvin&#39;s blog">
-<meta name="twitter:description" content="What&apos;s the difference between a man without a dream and a salted fish.">
+<meta name="twitter:title" content="LayaBox虚拟摇杆详细描述Layabox FSVJoy">
+<meta name="twitter:description" content="近期学习了Layabox游戏引擎，对游戏开发有了一定的认知，希望通过这次整理、总结 近期所学，能更近一步。使用Layabox引擎制作虚拟摇杆是很方便，我通过官方示例给出的代码制作 (参考LayaAir 3D角色脚本控制与碰撞检测)并详细解释一下 重要的代码段。   创建虚拟摇杆UI界面使用LayaAirIDE创建摇杆UI布局 创建一个Page ——&amp;gt; view 设置合适的宽高（例如：30">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/31/LayabFSVJoy/createFSVJoyLayout.jpg">
 
 
 
@@ -118,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/31/LayabFSVJoy/"/>
 
 
 
 
 
-  <title>Kelvin's blog</title>
+  <title>LayaBox虚拟摇杆详细描述Layabox FSVJoy | Kelvin's blog</title>
   
 
 
@@ -143,8 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +222,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/31/LayabFSVJoy/" itemprop="url">LayaBox虚拟摇杆详细描述Layabox FSVJoy</a></h1>
+          <h1 class="post-title" itemprop="name headline">LayaBox虚拟摇杆详细描述Layabox FSVJoy</h1>
         
 
         <div class="post-meta">
@@ -323,9 +326,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <blockquote>
 <p>近期学习了Layabox游戏引擎，对游戏开发有了一定的认知，希望通过这次整理、总结 近期所学，能更近一步。<br>使用Layabox引擎制作虚拟摇杆是很方便，我通过官方示例给出的代码制作 (参考<a href="https://ldc.layabox.com/doc/?nav=zh-ts-4-1-1" target="_blank" rel="noopener">LayaAir 3D角色脚本控制与碰撞检测</a>)<br>并详细解释一下 重要的代码段。</p>
 </blockquote>
@@ -388,8 +389,6 @@
 </ol>
 <p><strong>按照引用顺序不分先后</strong></p>
 
-          
-        
       
     </div>
     
@@ -404,14 +403,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/LayaBox/" rel="tag"># LayaBox</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -421,10 +426,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -432,6 +438,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -452,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -517,6 +536,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建虚拟摇杆UI界面"><span class="nav-number">1.</span> <span class="nav-text">创建虚拟摇杆UI界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用LayaAirIDE创建摇杆UI布局"><span class="nav-number">1.1.</span> <span class="nav-text">使用LayaAirIDE创建摇杆UI布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#必备知识"><span class="nav-number">2.</span> <span class="nav-text">必备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#角度与弧度"><span class="nav-number">2.1.</span> <span class="nav-text">角度与弧度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在坐标系中理解tan、atan和atan2"><span class="nav-number">2.2.</span> <span class="nav-text">在坐标系中理解tan、atan和atan2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心代码"><span class="nav-number">3.</span> <span class="nav-text">核心代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体代码实现"><span class="nav-number">4.</span> <span class="nav-text">具体代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -650,6 +685,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
